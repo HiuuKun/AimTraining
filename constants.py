@@ -1,0 +1,43 @@
+from enum import Enum
+
+# Constants
+WINDOW_WIDTH = 1200
+WINDOW_HEIGHT = 850
+FPS = 60
+GAME_DURATION = 60  # seconds
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (220, 50, 50)
+GREEN = (50, 220, 50)
+BLUE = (50, 150, 220)
+YELLOW = (255, 220, 50)
+GRAY = (150, 150, 150)
+DARK_GRAY = (80, 80, 80)
+LIGHT_GRAY = (200, 200, 200)
+ORANGE = (255, 165, 0)
+PURPLE = (138, 43, 226)
+CYAN = (0, 255, 255)
+NEON_PURPLE = (220, 50, 255)
+NEON_MAGENTA = (255, 44, 255)  # #ff2cff
+ELECTRIC_PURPLE = (91, 31, 166)  # #5b1fa6
+
+# UI Colors
+BG_DARK = (25, 25, 35)
+BG_MEDIUM = (35, 35, 50)
+ACCENT_BLUE = (64, 156, 255)
+ACCENT_GREEN = (76, 217, 100)
+ACCENT_RED = (255, 69, 58)
+ACCENT_YELLOW = (255, 214, 10)
+ACCENT_PURPLE = (191, 90, 242)
+
+# Game States
+class GameState(Enum):
+    START = 1
+    PLAYING = 2
+    PAUSED = 3
+    RESULTS = 4
+    INSTRUCTIONS = 5
+    SETTINGS = 6
+    SCOREBOARD = 7
