@@ -190,11 +190,11 @@ class GameplayView:
         # Score
         score_text = f"Score: {self.game.stats.score}"
         score_surface = self.game.medium_font.render(score_text, True, ACCENT_GREEN)
-        score_rect = score_surface.get_rect(center=(WINDOW_WIDTH // 2, 35))
+        score_rect = score_surface.get_rect(center=(WINDOW_WIDTH // 2 - 150, 35))
         screen.blit(score_surface, score_rect)
         
         # Hits/Misses with better formatting
-        stats_text = f"Hits: {self.game.stats.hits}  |  Misses: {self.game.stats.misses}"
+        stats_text = f"Hits: {self.game.stats.hits}  | Misses: {self.game.stats.user_misses}  |  Target Misses: {self.game.stats.target_misses}"
         stats_surface = self.game.medium_font.render(stats_text, True, WHITE)
         stats_rect = stats_surface.get_rect(right=WINDOW_WIDTH - 30, centery=35)
         screen.blit(stats_surface, stats_rect)

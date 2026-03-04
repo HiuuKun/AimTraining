@@ -107,7 +107,7 @@ class GameManager:
             }
         else:
             # Miss
-            self.stats.add_miss()
+            self.stats.add_user_miss()
             return {
                 'type': 'miss',
                 'x': pos[0],
@@ -143,7 +143,7 @@ class GameManager:
             if self.current_target:
                 if self.current_target.is_expired(current_time):
                     # Timeout
-                    self.stats.add_miss()
+                    self.stats.add_target_miss()
                     self.last_despawn_time = current_time
                     tx, ty = self.current_target.x, self.current_target.y
                     self.current_target = None

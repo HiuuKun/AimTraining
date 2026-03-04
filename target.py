@@ -41,9 +41,14 @@ class Target:
 @dataclass
 class GameStats:
     hits: int = 0
-    misses: int = 0
+    user_misses: int = 0
+    target_misses: int = 0
     score: int = 0
     reaction_times: List[float] = None
+    
+    @property
+    def misses(self) -> int:
+        return self.user_misses + self.target_misses
     
     def __post_init__(self):
         if self.reaction_times is None:
@@ -54,8 +59,11 @@ class GameStats:
         self.reaction_times.append(reaction_time)
         self.score += score_gained
     
-    def add_miss(self):
-        self.misses += 1
+    def add_user_miss(self):
+        self.user_misses += 1
+        
+    def add_target_miss(self):
+        self.target_misses += 1
     
     def get_accuracy(self) -> float:
         total = self.hits + self.misses

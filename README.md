@@ -30,8 +30,8 @@ Up to 100 additional points are awarded based on how fast your reaction time is.
 - *Explanation*: The faster you click the target before its Time-To-Live (TTL) runs out, the closer you get to the full 100 bonus points.
 
 ### 3. Misses & Timeouts
-- **Miss**: Clicking the background instead of a target.
-- **Timeout**: Letting a target disappear before clicking it.
+- **User Miss**: Clicking the background instead of a target.
+- **Target Miss**: Letting a target disappear before clicking it (Timeout).
 - **Penalty**: Both result in 0 points and lower your overall accuracy percentage at the end of the game.
 
 ### 4. Game History & Scoreboard

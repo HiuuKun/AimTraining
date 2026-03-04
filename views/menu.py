@@ -36,7 +36,7 @@ class MenuView:
         pygame.draw.rect(screen, (20, 20, 30), stats_panel, border_radius=15)
         pygame.draw.rect(screen, YELLOW, stats_panel, 3, border_radius=15)
         
-        y_offset = 190
+        y_offset = 100
         line_spacing = 60
         center_x = 100 + 450 // 2
         
@@ -44,7 +44,7 @@ class MenuView:
         score_text = self.game.large_font.render(f"Final Score: {self.game.stats.score}", True, GREEN)
         score_rect = score_text.get_rect(center=(center_x, y_offset))
         screen.blit(score_text, score_rect)
-        y_offset += line_spacing + 20
+        y_offset += line_spacing + 80
         
         # Hits and Misses
         hits_text = self.game.medium_font.render(f"Hits: {self.game.stats.hits}", True, WHITE)
@@ -52,9 +52,14 @@ class MenuView:
         screen.blit(hits_text, hits_rect)
         y_offset += line_spacing
         
-        misses_text = self.game.medium_font.render(f"Misses: {self.game.stats.misses}", True, WHITE)
-        misses_rect = misses_text.get_rect(center=(center_x, y_offset))
-        screen.blit(misses_text, misses_rect)
+        u_misses_text = self.game.medium_font.render(f"Misses: {self.game.stats.user_misses}", True, WHITE)
+        u_misses_rect = u_misses_text.get_rect(center=(center_x, y_offset))
+        screen.blit(u_misses_text, u_misses_rect)
+        y_offset += line_spacing
+        
+        t_misses_text = self.game.medium_font.render(f"Target Misses: {self.game.stats.target_misses}", True, WHITE)
+        t_misses_rect = t_misses_text.get_rect(center=(center_x, y_offset))
+        screen.blit(t_misses_text, t_misses_rect)
         y_offset += line_spacing
         
         # Accuracy
