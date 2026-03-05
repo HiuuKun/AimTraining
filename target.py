@@ -66,7 +66,7 @@ class GameStats:
         self.target_misses += 1
     
     def get_accuracy(self) -> float:
-        total = self.hits + self.misses
+        total = self.hits + self.user_misses
         return (self.hits / total * 100) if total > 0 else 0
     
     def get_avg_reaction_time(self) -> float:

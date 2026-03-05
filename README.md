@@ -32,7 +32,7 @@ Up to 100 additional points are awarded based on how fast your reaction time is.
 ### 3. Misses & Timeouts
 - **User Miss**: Clicking the background instead of a target.
 - **Target Miss**: Letting a target disappear before clicking it (Timeout).
-- **Penalty**: Both result in 0 points and lower your overall accuracy percentage at the end of the game.
+- **Penalty**: Both result in 0 points. User Misses also lower your overall accuracy percentage at the end of the game.
 
 ### 4. Game History & Scoreboard
 Whenever you finish a game naturally, your Final Score, Overall Accuracy, Average Reaction Time, and Date are automatically saved. You can proudly show off your top 10 best runs on the **Scoreboard** screen accessible from the main menu!
